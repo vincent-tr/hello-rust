@@ -7,6 +7,9 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+tokio = { version = "1.0.1", features = ["full"] }
+bytes = "1.0.0"
+mqttrs = "0.4.0"
 
 [[bin]]
 name = "hello-rust"
