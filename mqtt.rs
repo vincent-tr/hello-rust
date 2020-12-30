@@ -7,25 +7,25 @@ pub struct MqttClient {
 
 impl MqttClient {
   pub fn new() -> MqttClient {
-    let mut client =  MqttClient {task: None};
-
+    let mut client =  MqttClient {task: None, stream: None};
+    /*
     client.task = Some(tokio::spawn(async {
       client.do_loop().await;
     }));
+    */
 
     client
   }
 
   async fn do_loop(&mut self) {
-    let mut stream = TcpStream::connect("127.0.0.1:1883").await?;
+    //let mut stream = TcpStream::connect("127.0.0.1:1883").await?;
   }
 }
 
 impl Drop for MqttClient {
   fn drop(&mut self) {
-    if( let Some(stream) = self.stream)) {
-      
-    }
+    //if( let Some(stream) = self.stream)) {
+    //}
   }
 }
 
